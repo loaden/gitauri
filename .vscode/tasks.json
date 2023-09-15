@@ -2,19 +2,31 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"label": "rust: cargo check",
 			"type": "cargo",
 			"command": "check",
 			"options": {
-				"cwd": "${fileDirname}",
+				"cwd": "${fileDirname}"
 			},
 			"problemMatcher": [
 				"$rustc"
 			],
-			"label": "rust: cargo check",
 			"group": {
 				"kind": "build",
 				"isDefault": true
 			}
+		},
+		{
+			"label": "rust: cargo tauri dev",
+			"type": "cargo",
+			"command": "tauri",
+			"args": [
+				"dev"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": []
 		}
 	]
 }
