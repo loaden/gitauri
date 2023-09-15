@@ -1,27 +1,6 @@
-[package]
-name = "gitauri"
-version = "0.0.1"
-edition = "2021"
-
-[[bin]]
-path = "src/main.rs"
-name = "gitauri"
-
 [workspace]
-members = ["base"]
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[build-dependencies]
-tauri-build = { version = "1.4", features = [] }
-
-[dependencies]
-base = { path = "base" }
-tauri = { version = "1.4", features = ["shell-open"] }
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
-
-[features]
-# this feature is used for production builds or when `devPath` points to the filesystem
-# DO NOT REMOVE!!
-custom-protocol = ["tauri/custom-protocol"]
+resolver = "2"
+members = [
+    "base",
+    "gui"
+]
