@@ -14,10 +14,9 @@ fn greet(name: &str) -> String {
         return "Please input your name!".to_string();
     }
     format!(
-        "Hello, {}! You've been greeted from {} {}!",
+        "Hello, {}! You've been greeted from {}!",
         name,
-        base::G_APPNAME,
-        base::add(1, 2) + times(2, 3)
+        base::G_APPNAME
     )
 }
 
