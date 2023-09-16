@@ -1,5 +1,5 @@
 {
-    // 使用 IntelliSense 了解相关属性。 
+    // 使用 IntelliSense 了解相关属性。
     // 悬停以查看现有属性的描述。
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
@@ -101,16 +101,16 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug integration test 'test_gui_greeting'",
+            "name": "Debug integration test 'test_app_greeting'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
-                    "--test=test_gui_greeting",
+                    "--test=test_app_greeting",
                     "--package=gitauri"
                 ],
                 "filter": {
-                    "name": "test_gui_greeting",
+                    "name": "test_app_greeting",
                     "kind": "test"
                 }
             },
