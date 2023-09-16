@@ -26,6 +26,25 @@
         {
             "type": "lldb",
             "request": "launch",
+            "name": "Debug integration test 'test_base_add'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=test_base_add",
+                    "--package=base"
+                ],
+                "filter": {
+                    "name": "test_base_add",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
             "name": "Debug unit tests in library 'gitauri'",
             "cargo": {
                 "args": [
@@ -74,6 +93,25 @@
                 "filter": {
                     "name": "gitauri",
                     "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'test_gui_greeting'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=test_gui_greeting",
+                    "--package=gitauri"
+                ],
+                "filter": {
+                    "name": "test_gui_greeting",
+                    "kind": "test"
                 }
             },
             "args": [],

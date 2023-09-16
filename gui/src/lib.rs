@@ -1,4 +1,7 @@
 pub fn greet(name: &str) -> String {
+    if name.len() == 0 || name.trim().len() == 0 {
+        return "Please input your name!".to_owned()
+    }
     format!(
         "Hello, {}! You've been greeted from {} {}!",
         name,
