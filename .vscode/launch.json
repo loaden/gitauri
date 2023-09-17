@@ -7,6 +7,83 @@
         {
             "type": "lldb",
             "request": "launch",
+            "name": "Debug executable 'gitauri'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=gitauri",
+                    "--package=gitauri"
+                ],
+                "filter": {
+                    "name": "gitauri",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            // task for the `beforeDevCommand` if used, must be configured in `.vscode/tasks.json`
+            "preLaunchTask": "ui:dev"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'gitauri'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=gitauri",
+                    "--package=gitauri"
+                ],
+                "filter": {
+                    "name": "gitauri",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'gitauri'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=gitauri"
+                ],
+                "filter": {
+                    "name": "gitauri",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'test_app_greeting'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=test_app_greeting",
+                    "--package=gitauri"
+                ],
+                "filter": {
+                    "name": "test_app_greeting",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
             "name": "Debug unit tests in library 'base'",
             "cargo": {
                 "args": [
@@ -36,81 +113,6 @@
                 ],
                 "filter": {
                     "name": "test_base_add",
-                    "kind": "test"
-                }
-            },
-            "args": [],
-            "cwd": "${workspaceFolder}"
-        },
-        {
-            "type": "lldb",
-            "request": "launch",
-            "name": "Debug unit tests in library 'gitauri'",
-            "cargo": {
-                "args": [
-                    "test",
-                    "--no-run",
-                    "--lib",
-                    "--package=gitauri"
-                ],
-                "filter": {
-                    "name": "gitauri",
-                    "kind": "lib"
-                }
-            },
-            "args": [],
-            "cwd": "${workspaceFolder}"
-        },
-        {
-            "type": "lldb",
-            "request": "launch",
-            "name": "Debug executable 'gitauri'",
-            "cargo": {
-                "args": [
-                    "build",
-                    "--bin=gitauri",
-                    "--package=gitauri"
-                ],
-                "filter": {
-                    "name": "gitauri",
-                    "kind": "bin"
-                }
-            },
-            "args": [],
-            "cwd": "${workspaceFolder}"
-        },
-        {
-            "type": "lldb",
-            "request": "launch",
-            "name": "Debug unit tests in executable 'gitauri'",
-            "cargo": {
-                "args": [
-                    "test",
-                    "--no-run",
-                    "--bin=gitauri",
-                    "--package=gitauri"
-                ],
-                "filter": {
-                    "name": "gitauri",
-                    "kind": "bin"
-                }
-            },
-            "args": [],
-            "cwd": "${workspaceFolder}"
-        },
-        {
-            "type": "lldb",
-            "request": "launch",
-            "name": "Debug integration test 'test_app_greeting'",
-            "cargo": {
-                "args": [
-                    "test",
-                    "--no-run",
-                    "--test=test_app_greeting",
-                    "--package=gitauri"
-                ],
-                "filter": {
-                    "name": "test_app_greeting",
                     "kind": "test"
                 }
             },

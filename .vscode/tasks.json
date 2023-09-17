@@ -27,6 +27,21 @@
 				"cwd": "${workspaceFolder}"
 			},
 			"problemMatcher": []
-		}
+		},
+		{
+			"label": "ui:dev",
+			"type": "shell",
+			// `dev` keeps running in the background
+			// ideally you should also configure a `problemMatcher`
+			// see https://code.visualstudio.com/docs/editor/tasks#_can-a-background-task-be-used-as-a-prelaunchtask-in-launchjson
+			"isBackground": true,
+			"problemMatcher": ["$tsc-watch"],
+			// change this to your `beforeDevCommand`:
+			"command": "npm",
+			"args": [
+				"run",
+				"dev"
+			]
+		},
 	]
 }
