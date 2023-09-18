@@ -37,9 +37,8 @@
 			"isBackground": true,
 			"problemMatcher": ["$tsc-watch"],
 			// change this to your `beforeDevCommand`:
-			"command": "npm",
+			"command": "yarn",
 			"args": [
-				"run",
 				"dev"
 			]
 		},
